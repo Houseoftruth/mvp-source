@@ -10,6 +10,7 @@ phases:
       - ng build --prod
   post_build:
     commands:
+      - aws s3api list-buckets --query "Buckets[].Name"
       - aws s3 sync dist/mvp-frontend s3://mvp-beta --acl 'public-read' --delete
 
 artifacts:
