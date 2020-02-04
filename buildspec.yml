@@ -11,5 +11,14 @@ phases:
   post_build:
     commands:
       - aws s3 sync ./dist/mvp-frontend s3://mvp-beta --acl 'public-read' --delete
+
+artifacts:
+  files:
+    - '**/*.html'
+    - '**/*.js'
+    - '**/*.css'
+    - '**/*.ico'
+  discard-paths: yes
+  base-directory: 'dist/mvp-frontend'
       
       
