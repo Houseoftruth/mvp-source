@@ -10,6 +10,6 @@ phases:
       - ng build --prod
   post_build:
     commands:
-      - aws s3 sync ./dist/mvp-frontend s3://mvp-beta --acl 'public-read'
+      - aws s3 sync ./dist/mvp-frontend s3://mvp-beta --acl 'public-read' --delete
       
       
