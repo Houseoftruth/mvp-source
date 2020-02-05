@@ -13,16 +13,12 @@ phases:
     commands:
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
-      - aws s3 sync ./ s3://codepipeline-eu-central-1-339353960839 --acl 'public-read' --delete
+      - aws s3 sync ./ s3://mvp-beta --acl 'public-read' --delete
 
 artifacts:
   files:
     - imageDetail.json
-    - '**/*.html'
-    - '**/*.js'
-    - '**/*.css'
-    - '**/*.ico'
-  discard-paths: yes
+
 
 
       
