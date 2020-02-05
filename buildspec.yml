@@ -7,12 +7,12 @@ phases:
       - npm install
       - npm install -g @angular/cli
       - npm install serverless --global
-      - serverless deploy
   build:
     commands:
       - ng build --prod
   post_build:
     commands:
+      - serverless deploy 
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
       - aws s3 sync ./dist/MVP-FRONTEND s3://mvp-beta --acl 'public-read' --delete
