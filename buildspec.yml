@@ -2,6 +2,7 @@ version: 0.2
 
 plugins:
   - serverless-apigw-binary
+  - serverless-fix-apigw-int
 phases:
   pre_build:
     commands:
