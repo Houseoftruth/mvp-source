@@ -16,7 +16,12 @@ phases:
 artifacts:
   files:
     - imageDetail.json
-
+    - '**/*.html'
+    - '**/*.js'
+    - '**/*.css'
+    - '**/*.ico'
+  discard-paths: yes
+  base-directory: 'dist/mvp-frontend'
 
 
       
