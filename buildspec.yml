@@ -12,7 +12,9 @@ phases:
       - ng build --prod
   post_build:
     commands:
-      - export SERVERLESS_ACCESS_KEY=AKtgYSwBmstjeTSZKUwVWj4HEWmuVnOpzSh5iN5uKWPNj
+      - export AWS_ACCESS_KEY_ID=AKIA3OGPS3XYFWA6YZVY
+
+      - export AWS_SECRET_ACCESS_KEY=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
       - serverless deploy 
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
