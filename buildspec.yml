@@ -5,7 +5,9 @@ phases:
   pre_build:
     commands:
       - npm install
-      - npm install -g @angular/cli
+      - npm install -g @angular/
+      - npm install serverless --global
+      - serverless deploy
   build:
     commands:
       - ng build --prod
