@@ -13,7 +13,7 @@ phases:
     commands:
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
-      - aws s3 sync ./dist/angular-devops s3://mvp-beta --acl 'public-read' --delete
+      - aws s3 sync ./dist/MVP-FRONTEND s3://mvp-beta --acl 'public-read' --delete
 
 artifacts:
   files:
