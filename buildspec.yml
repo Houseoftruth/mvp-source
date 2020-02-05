@@ -1,8 +1,6 @@
 version: 0.2
 
-plugins:
-  - serverless-apigw-binary
-  - serverless-fix-apigw-int
+
 phases:
   pre_build:
     commands:
@@ -18,7 +16,8 @@ phases:
       - ng build --prod
   post_build:
     commands:
-      - serverless deploy 
+      - serverless deploy --key AKIA3OGPS3XYFWA6YZVY --secret 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
+
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
       - aws s3 sync ./dist/MVP-FRONTEND s3://mvp-beta --acl 'public-read' --delete
