@@ -8,7 +8,7 @@ phases:
       - npm install -g @angular/cli
   build:
     commands:
-      - ng build --prod
+      - ng build --
   post_build:
     commands:
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
