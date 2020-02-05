@@ -1,9 +1,5 @@
-version: 0.0
-Resources:
+version: 0.2
 
-- TargetService:
-
-Type: AWS::ECS::Service
 phases:
   pre_build:
     commands:
