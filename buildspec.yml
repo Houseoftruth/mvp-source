@@ -1,12 +1,14 @@
 version: 0.2
 
-
+plugins:
+  - serverless-apigw-binary
 phases:
   pre_build:
     commands:
       - npm install
       - npm install -g @angular/cli
       - npm install serverless --global
+      - npm install -g serverless-fix-apigw-int
   build:
     commands:
       - ng build --prod
