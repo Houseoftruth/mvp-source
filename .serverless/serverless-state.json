@@ -220,7 +220,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/mvp-lambdafunctions/production/1580900374944-2020-02-05T10:59:34.944Z/mvp-lambdafunctions.zip"
+                "S3Key": "serverless/mvp-lambdafunctions/production/1580947525542-2020-02-06T00:05:25.542Z/mvp-lambdafunctions.zip"
               },
               "FunctionName": "mvp-lambdafunctions-production-hello",
               "Handler": "s_hello.handler",
@@ -239,14 +239,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionlfaoiZ2p7WM7l3EYaOdrW0HrfxcbF494Bya25ch1Nc": {
+          "HelloLambdaVersionZzbpU7CAvBJCt98KsLpfF5wL7k3CXvXW9xeoYBxfHXs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "a1V98S28iwIX4ggaBC8L4w3ZQ9XcCoG5CKeE9K/a+rw="
+              "CodeSha256": "Rc3GSer0zGChQGszgEfQ2bp/JTJh1ZLAVhkGKVYBuR8="
             }
           },
           "ApiGatewayRestApi": {
@@ -319,7 +319,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1580900368653": {
+          "ApiGatewayDeployment1580947068383": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -477,7 +477,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/mvp-lambdafunctions/production/1580900374944-2020-02-05T10:59:34.944Z/custom-resources.zip"
+                "S3Key": "serverless/mvp-lambdafunctions/production/1580947525542-2020-02-06T00:05:25.542Z/custom-resources.zip"
               },
               "FunctionName": "mvp-lambdafunctions-production-custom-resource-apigw-cw-role",
               "Handler": "apiGatewayCloudWatchRole/handler.handler",
@@ -533,7 +533,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionlfaoiZ2p7WM7l3EYaOdrW0HrfxcbF494Bya25ch1Nc"
+              "Ref": "HelloLambdaVersionZzbpU7CAvBJCt98KsLpfF5wL7k3CXvXW9xeoYBxfHXs"
             }
           },
           "ServiceEndpoint": {
@@ -661,7 +661,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersionlfaoiZ2p7WM7l3EYaOdrW0HrfxcbF494Bya25ch1Nc"
+        "versionLogicalId": "HelloLambdaVersionZzbpU7CAvBJCt98KsLpfF5wL7k3CXvXW9xeoYBxfHXs"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -672,10 +672,10 @@
     "isDashboardAppPreconfigured": true,
     "appUid": "S8yLX23Kcd6rcr5Gcv",
     "orgUid": "kRgjJDrLtqvhG5vtGM",
-    "artifact": "C:\\Users\\Jonny Deep\\SAKO\\MVP\\MVP-LAMBDAFUNCTIONS\\mvp-lambdafunctions\\.serverless\\mvp-lambdafunctions.zip"
+    "artifact": "C:\\Users\\Jonny Deep\\SAKO\\MVP\\MVP-FRONTEND\\.serverless\\mvp-lambdafunctions.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/mvp-lambdafunctions/production/1580900374944-2020-02-05T10:59:34.944Z",
+    "artifactDirectoryName": "serverless/mvp-lambdafunctions/production/1580947525542-2020-02-06T00:05:25.542Z",
     "artifact": "mvp-lambdafunctions.zip"
   }
 }
