@@ -17,7 +17,7 @@ phases:
       - serverless deploy --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
-      - aws s3 sync ./dist/MVP-FRONTEND s3://mvp-beta --acl 'public-read' --delete
+      - aws s3 sync ./dist/MVP-FRONTEND s3://mvp-source-dev --acl 'public-read' --delete
 
 artifacts:
   files:
