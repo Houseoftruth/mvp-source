@@ -1,5 +1,16 @@
 'use strict';
 const AWS =  require('aws-sdk')
+var Pusher = require('pusher');
+
+var pusher = new Pusher({
+  appId: '943215',
+  key: '8ee023791f4005e8154a',
+  secret: 'ea932f5b6d34e25e1b0e',
+  cluster: 'mt1',
+  encrypted: true
+});
+
+
 AWS.config.update({ region: "eu-central-1"});
 
 
@@ -30,7 +41,9 @@ console.log("BEFORE DOCLIENT")
 exports.creatTable = async (event,context, callback)=>{
 
   const ddb = new AWS.DynamoDB({ apiVersion: "2012-10-08",region: "eu-central-1"});
-
+  pusher.trigger('my-channel', 'my-event', {
+    "message": "hello world"
+  });
   var tableParams = {
     AttributeDefinitions: [
       {
