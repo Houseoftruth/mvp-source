@@ -38,6 +38,81 @@ console.log("BEFORE DOCLIENT")
 
 
 };
+
+
+exports.addMessageToLogAdmin = async (event, context, callback)=> {
+
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+
+  const params = {
+    TableName: "mvp-chatlog",
+    Item: {
+      date: Date.now(),
+      message: "Excuse me, but may i have some more butter, please?"
+    }
+  }
+  
+  try {
+    const data = await documentClient.put(params).promise();
+
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+  
+console.log("BEFORE DOCLIENT")
+
+
+};
+exports.addMessageToLogKitchen = async (event, context, callback)=> {
+
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+
+  const params = {
+    TableName: "mvp-chatlog",
+    Item: {
+      date: Date.now(),
+      message: "Excuse me, but may i have some more butter, please?"
+    }
+  }
+  
+  try {
+    const data = await documentClient.put(params).promise();
+
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+  
+console.log("BEFORE DOCLIENT")
+
+
+};
+exports.addMessageToLogCustomer = async (event, context, callback)=> {
+
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+
+  const params = {
+    TableName: "mvp-chatlog",
+    Item: {
+      date: Date.now(),
+      message: "Excuse me, but may i have some more butter, please?"
+    }
+  }
+  
+  try {
+    const data = await documentClient.put(params).promise();
+
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+  
+console.log("BEFORE DOCLIENT")
+
+
+};
+
 exports.creatTable = async (event,context, callback)=>{
 
   const ddb = new AWS.DynamoDB({ apiVersion: "2012-10-08",region: "eu-central-1"});
